@@ -6,6 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 1. Header Scroll Effect (Mobile toggle removed)
     const header = document.getElementById('site-header');
+    const loginModal = document.getElementById('login-modal');
+    const loginOpenBtn = document.getElementById('login-open');
+    const loginCloseBtn = document.getElementById('login-close');
+
+    // Login Modal Toggle
+    if (loginOpenBtn && loginModal && loginCloseBtn) {
+        loginOpenBtn.addEventListener('click', () => {
+            loginModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // 스크롤 방지
+        });
+
+        loginCloseBtn.addEventListener('click', () => {
+            loginModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // 모달 바깥쪽 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {

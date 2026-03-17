@@ -68,24 +68,72 @@
 <body>
     <header id="site-header">
         <div class="container header-container">
-            <a href="#" class="logo-link" aria-label="홈으로 가기">
-                <img src="https://via.placeholder.com/50x50/4A148C/FFFFFF?text=CBNU" alt="충북대학교 마크" class="logo-mark">
-                <h1 class="site-title">
-                    <span class="univ-name">충북대학교</span>
-                    <span class="dept-name">경영정보학과</span>
-                </h1>
+            <a href="index.html" class="logo-link">
+                <img src="Icon.png" alt="충북대학교 로고">
             </a>
-            <nav id="main-nav" aria-label="메인 네비게이션">
+
+            <nav id="main-nav">
                 <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">학과소개</a></li>
-                    <li><a href="#partners" class="nav-link">연구 파트너</a></li>
-                    <li><a href="#info" class="nav-link">학교안내</a></li>
-                    <li><a href="#community" class="nav-link">커뮤니티</a></li>
-                    <li><a href="#contact" class="nav-link">문의하기</a></li>
+                    <li class="nav-item">
+                        <a href="#portal" class="nav-link">학과소개</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">교육목표</a></li>
+                            <li><a href="#">연혁</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portal" class="nav-link">연구 파트너</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">교수진 소개</a></li>
+                            <li><a href="#">연구실 현황</a></li>
+                            <li><a href="#">산학협력단</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portal" class="nav-link">학교안내</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">입학 안내</a></li>
+                            <li><a href="#">장학 제도</a></li>
+                            <li><a href="#">캠퍼스 맵</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portal" class="nav-link">커뮤니티</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">취업정보</a></li>
+                            <li><a href="#">갤러리</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">문의하기</a></li>
                 </ul>
             </nav>
+
+            <div class="header-auth">
+                <button type="button" class="btn-login" id="login-open">로그인</button>
+            </div>
         </div>
     </header>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="login-close">&times;</span>
+            <form class="login-form">
+                <h2>Portal Login</h2>
+                <div class="form-group">
+                    <label for="login-id">학번/ID</label>
+                    <input type="text" id="login-id" placeholder="ID를 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-pw">비밀번호</label>
+                    <input type="password" id="login-pw" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn-login-submit">로그인하기</button>
+            </form>
+        </div>
+    </div>
 
     <main>
         <!-- Hero Section -->

@@ -5,20 +5,20 @@
 /* Variables */
 :root {
     /* Color Palette - Updated to Light Purple Focus */
-    --clr-bg-primary: #F9F7FF; /* 아주 연한 보라빛 배경 */
-    --clr-bg-secondary: #F0E8FF; /* 연한 자주색 배경 */
-    --clr-bg-surface: #FFFFFF;
+    --clr-bg-primary: #FDFBFF; 
+    --clr-bg-secondary: #F5EFFF; 
+    --clr-bg-surface: #FDFBFF;
     
-    --clr-primary: #8E44AD; /* 보라색 (Primary) */
-    --clr-primary-light: #BB8FCE; /* 연한 자주색/라벤더 */
-    --clr-primary-dark: #6C3483; /* 깊은 자주색 */
-    --clr-accent: #E8DAEF; /* 강조용 연보라 */
+    --clr-primary: #8E44AD; 
+    --clr-primary-light: #BB8FCE; 
+    --clr-primary-dark: #6C3483; 
+    --clr-accent: #FFD700; 
     
     --clr-text-main: #2D3436;
     --clr-text-muted: #636E72;
     --clr-text-light: #B2BEC3;
     
-    --clr-border: #E8E1F5;
+    --clr-border: #E8DAEF;
     
     /* Typography */
     --font-main: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -162,50 +162,145 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.logo-link img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }
 
-.logo-mark {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px; /* Slightly rounded, or 50% for circle */
-    box-shadow: var(--shadow-sm);
-}
-
-.site-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.univ-name {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--clr-text-muted);
-    letter-spacing: 0.5px;
-}
-
-.dept-name {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--clr-primary-dark);
-    letter-spacing: -0.5px;
-}
-
+/* Dropdown Navigation */
 .nav-list {
     display: flex;
     gap: 2rem;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+    padding: 1.5rem 0;
 }
 
 .nav-link {
-    font-weight: 600;
     font-size: 1.05rem;
+    font-weight: 600;
     color: var(--clr-text-main);
-    position: relative;
+    display: block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: var(--shadow-lg);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
     padding: 0.5rem 0;
+    z-index: 1000;
+    border: 1px solid var(--clr-border);
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--clr-text-main);
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--clr-bg-secondary);
+    color: var(--clr-primary);
+}
+
+/* Auth Buttons */
+.header-auth {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-primary);
+    padding: 0.4rem 1.25rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-login:hover {
+    background: var(--clr-primary);
+    color: #fff;
+}
+
+/* Login Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--clr-text-light);
+}
+
+.login-form h2 {
+    text-align: center;
+    color: var(--clr-primary-dark);
+    margin-bottom: 2rem;
+}
+
+.login-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.btn-login-submit {
+    width: 100%;
+    background-color: var(--clr-primary);
+    color: #fff;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 1rem;
 }
 
 .nav-link::after {
