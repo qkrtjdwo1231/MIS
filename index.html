@@ -1,9 +1,8 @@
-<!-- Deployment Version: 1.0.1 - Portal Update -->
 <!DOCTYPE html>
-<html lang="ko">
+<html class="light" lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>충북대학교 경영정보학과 | CBNU MIS</title>
     
     <!-- SEO Optimization -->
@@ -22,356 +21,429 @@
     <meta property="og:site_name" content="충북대학교 경영정보학과">
     <meta property="og:locale" content="ko_KR">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="충북대학교 경영정보학과">
-    <meta name="twitter:description" content="미래를 선도하는 IT와 경영의 융합. 충북대학교 경영정보학과 공식 홈페이지입니다.">
-    <meta name="twitter:image" content="images/hero_campus.png">
-    
-    <!-- Security: Enhanced Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
+    <!-- Security -->
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
-    <meta name="theme-color" content="#4A148C">
+    <meta name="theme-color" content="#5d0025">
 
-    <!-- JSON-LD Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "충북대학교 경영정보학과",
-      "url": "https://mis.cbnu.ac.kr/",
-      "logo": "https://via.placeholder.com/200x200/4A148C/FFFFFF?text=CBNU+MIS",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "충대로 1",
-        "addressLocality": "청주시",
-        "addressRegion": "충청북도",
-        "postalCode": "28644",
-        "addressCountry": "KR"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+82-43-261-2114",
-        "contactType": "University Office"
-      }
-    }
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-container": "#ff8aa5",
+                "inverse-surface": "#303030",
+                "on-tertiary-fixed-variant": "#38485a",
+                "surface-variant": "#e4e2e1",
+                "surface-dim": "#dcd9d9",
+                "background": "#fbf9f8",
+                "outline-variant": "#debfc3",
+                "on-surface-variant": "#574145",
+                "on-error": "#ffffff",
+                "surface-container-low": "#f6f3f2",
+                "error": "#ba1a1a",
+                "on-primary-fixed-variant": "#8d093d",
+                "surface-container-highest": "#e4e2e1",
+                "error-container": "#ffdad6",
+                "surface-tint": "#ae2954",
+                "secondary": "#b70054",
+                "tertiary-container": "#324355",
+                "primary-container": "#860038",
+                "on-primary-fixed": "#3f0017",
+                "tertiary-fixed-dim": "#b7c8de",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed": "#3f0018",
+                "tertiary": "#1c2d3e",
+                "primary-fixed": "#ffd9df",
+                "outline": "#8b7075",
+                "on-tertiary-fixed": "#0b1d2d",
+                "surface-container-high": "#eae8e7",
+                "tertiary-fixed": "#d2e4fb",
+                "primary": "#5d0025",
+                "on-surface": "#1b1c1c",
+                "on-secondary": "#ffffff",
+                "inverse-primary": "#ffb1c0",
+                "primary-fixed-dim": "#ffb1c0",
+                "on-tertiary-container": "#9eafc5",
+                "secondary-fixed-dim": "#ffb1c2",
+                "inverse-on-surface": "#f3f0f0",
+                "secondary-container": "#e0186b",
+                "on-tertiary": "#ffffff",
+                "on-background": "#1b1c1c",
+                "surface": "#fbf9f8",
+                "on-secondary-container": "#fffbff",
+                "surface-container": "#f0eded",
+                "secondary-fixed": "#ffd9e0",
+                "on-secondary-fixed-variant": "#8f0040",
+                "on-primary": "#ffffff",
+                "on-error-container": "#93000a",
+                "surface-bright": "#fbf9f8"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "9999px"},
+            },
+          },
+        }
     </script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #5d0025 0%, #860038 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+        /* Scroll Reveal Animation */
+        .reveal-card {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal-card.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        /* Modal Style for Login */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #5d0025;
+        }
+        /* Header Scrolled State */
+        #site-header.scrolled {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-    <header id="site-header">
-        <div class="container header-container">
-            <a href="index.html" class="logo-link">
-                <img src="Icon.png" alt="충북대학교 로고">
-            </a>
+<body class="bg-background text-on-surface font-body selection:bg-secondary/30">
 
-            <nav id="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#portal" class="nav-link">학과소개</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">인사말</a></li>
-                            <li><a href="#">교육목표</a></li>
-                            <li><a href="#">연혁</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#portal" class="nav-link">연구 파트너</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">교수진 소개</a></li>
-                            <li><a href="#">연구실 현황</a></li>
-                            <li><a href="#">산학협력단</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#portal" class="nav-link">학교안내</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">입학 안내</a></li>
-                            <li><a href="#">장학 제도</a></li>
-                            <li><a href="#">캠퍼스 맵</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#portal" class="nav-link">커뮤니티</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">자유게시판</a></li>
-                            <li><a href="#">취업정보</a></li>
-                            <li><a href="#">갤러리</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">문의하기</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-auth">
-                <button type="button" class="btn-login" id="login-open">로그인</button>
+<!-- Login Modal -->
+<div class="modal" id="login-modal">
+    <div class="modal-content">
+        <span class="close-modal" id="login-close">&times;</span>
+        <form class="space-y-6">
+            <h2 class="text-3xl font-headline font-extrabold text-[#5d0025]">Portal Login</h2>
+            <div class="space-y-2">
+                <label for="login-id" class="block font-label text-sm font-bold uppercase text-tertiary/70">학번/ID</label>
+                <input type="text" id="login-id" class="w-full p-3 bg-surface-container-low border-b-2 border-outline-variant/30 focus:border-[#5d0025] outline-none transition-colors" placeholder="ID를 입력하세요" required>
             </div>
-        </div>
-    </header>
+            <div class="space-y-2">
+                <label for="login-pw" class="block font-label text-sm font-bold uppercase text-tertiary/70">비밀번호</label>
+                <input type="password" id="login-pw" class="w-full p-3 bg-surface-container-low border-b-2 border-outline-variant/30 focus:border-[#5d0025] outline-none transition-colors" placeholder="Password" required>
+            </div>
+            <button type="submit" class="w-full editorial-gradient text-white py-4 rounded-full font-label font-bold uppercase tracking-widest shadow-lg hover:shadow-[#5d0025]/20 transition-all">
+                로그인하기
+            </button>
+        </form>
+    </div>
+</div>
 
-    <!-- Login Modal -->
-    <div class="modal" id="login-modal">
-        <div class="modal-content">
-            <span class="close-modal" id="login-close">&times;</span>
-            <form class="login-form">
-                <h2>Portal Login</h2>
-                <div class="form-group">
-                    <label for="login-id">학번/ID</label>
-                    <input type="text" id="login-id" placeholder="ID를 입력하세요" required>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f8]/80 dark:bg-[#1c2d3e]/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-colors duration-300" id="site-header">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+        <div class="flex items-center">
+            <a href="index.html" class="flex items-center group gap-4">
+                <div class="h-10 w-1.5 editorial-gradient rounded-full shadow-sm transition-all duration-300 group-hover:h-12"></div>
+                <div class="flex flex-col justify-center">
+                    <span class="text-[10px] font-bold text-secondary uppercase tracking-[0.3em] leading-none mb-1.5">CHUNGBUK NAT'L UNIV.</span>
+                    <span class="text-2xl font-black text-primary tracking-tighter font-headline leading-none">경영정보학과</span>
                 </div>
-                <div class="form-group">
-                    <label for="login-pw">비밀번호</label>
-                    <input type="password" id="login-pw" placeholder="Password" required>
-                </div>
-                <button type="submit" class="btn-login-submit">로그인하기</button>
-            </form>
+            </a>
+        </div>
+        <div class="hidden lg:flex items-center space-x-8">
+            <a class="font-headline font-bold tracking-tight text-[#1c2d3e] dark:text-[#fbf9f8]/70 hover:text-[#5d0025] dark:hover:text-[#b70054] transition-colors" href="#programs">학과소개</a>
+            <a class="font-headline font-bold tracking-tight text-[#1c2d3e] dark:text-[#fbf9f8]/70 hover:text-[#5d0025] dark:hover:text-[#b70054] transition-colors" href="#faculty">연구 파트너</a>
+            <a class="font-headline font-bold tracking-tight text-[#1c2d3e] dark:text-[#fbf9f8]/70 hover:text-[#5d0025] dark:hover:text-[#b70054] transition-colors" href="#news">학과 소식</a>
+            <a class="font-headline font-bold tracking-tight text-[#1c2d3e] dark:text-[#fbf9f8]/70 hover:text-[#5d0025] dark:hover:text-[#b70054] transition-colors" href="#admissions">학교안내</a>
+            <a class="font-headline font-bold tracking-tight text-[#1c2d3e] dark:text-[#fbf9f8]/70 hover:text-[#5d0025] dark:hover:text-[#b70054] transition-colors" href="#community">커뮤니티</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button id="login-open" class="text-[#5d0025] border-2 border-[#5d0025] px-6 py-2 rounded-full font-label text-sm font-bold uppercase tracking-wider hover:bg-[#5d0025] hover:text-white transition-all">
+                Login
+            </button>
+            <a href="#contact" class="editorial-gradient text-white px-6 py-2 rounded-full font-label text-sm font-bold uppercase tracking-wider scale-95 active:scale-90 transition-transform duration-200 shadow-md">
+                문의하기
+            </a>
         </div>
     </div>
+</nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="hero-bg">
-                <img src="images/hero_campus.png" alt="충북대학교 캠퍼스 전경" class="hero-image">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="container hero-content">
-                <span class="hero-badge">Welcome to CBNU MIS</span>
-                <h2 class="hero-title">미래 비즈니스를 혁신하는<br><strong>IT융합 리더의 전당</strong></h2>
-                <p class="hero-subtitle">데이터와 기술로 새로운 경영의 패러다임을 제시하며, 4차 산업혁명을 주도할 창의적인 인재를 양성합니다.</p>
-                <div class="hero-actions">
-                    <a href="#about" class="btn btn-primary">학과 알아보기</a>
-                    <a href="#community" class="btn btn-secondary">최신 소식 보기</a>
+<main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative h-[870px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover" src="images/hero_campus.png" alt="CBNU Campus"/>
+            <div class="absolute inset-0 bg-primary/20 backdrop-brightness-75"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container font-label text-sm font-bold rounded-md mb-6 uppercase tracking-widest">Innovation & Excellence</span>
+                <h1 class="text-white font-headline font-extrabold text-6xl md:text-8xl leading-[1.1] tracking-tighter mb-8">
+                    미래 비즈니스를 혁신하는<br/>IT융합 리더의 전당.
+                </h1>
+                <p class="text-white/80 text-xl font-body mb-10 max-w-xl">데이터와 기술로 새로운 경영의 패러다임을 제시하며, 4차 산업혁명을 주도할 창의적인 인재를 양성합니다.</p>
+                <div class="flex gap-4">
+                    <a href="#programs" class="editorial-gradient text-white px-10 py-4 rounded-full font-label text-md font-bold uppercase tracking-widest shadow-xl hover:shadow-[#5d0025]/40 transition-all text-center">
+                        학과 알아보기
+                    </a>
+                    <a href="#news" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full font-label text-md font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all text-center">
+                        최신 소식 보기
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Department Portal Section (Integrated Categories & News) -->
-        <section id="portal" class="portal-section">
-            <div class="container portal-grid">
-                <!-- Left: 2x2 Category Tiles -->
-                <div class="category-tiles">
-                    <article class="tile tile-primary reveal-card">
-                        <div class="tile-content">
-                            <span class="tile-label">VISION</span>
-                            <h3 class="tile-title">미래를 선도하는<br>IT 경영인</h3>
-                            <p class="tile-desc">경영정보학부의 목표와 교육과정을 소개합니다.</p>
-                            <a href="#about" class="tile-link">학과소개 →</a>
-                        </div>
-                    </article>
-                    <article class="tile tile-image reveal-card" style="background-image: url('images/dept_intro.png');">
-                        <div class="tile-overlay">
-                            <h3 class="tile-title">CAMPUS LIFE</h3>
-                            <a href="#info" class="tile-link">학교 안내 →</a>
-                        </div>
-                    </article>
-                    <article class="tile tile-image reveal-card" style="background-image: url('images/research_partners.png');">
-                        <div class="tile-overlay">
-                            <h3 class="tile-title">RESEARCH</h3>
-                            <a href="#partners" class="tile-link">산학 협력 →</a>
-                        </div>
-                    </article>
-                    <article class="tile tile-secondary reveal-card">
-                        <div class="tile-content">
-                            <span class="tile-label">ALUMNI</span>
-                            <h3 class="tile-title">강력한 동문<br>네트워크</h3>
-                            <p class="tile-desc">글로벌 무대에서 활약하는 선배들을 만나보세요.</p>
-                            <a href="#community" class="tile-link">커뮤니티 →</a>
-                        </div>
-                    </article>
+    <!-- Core Specializations -->
+    <section id="programs" class="py-24 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="font-headline font-bold text-4xl text-primary mb-4">핵심 교육 분야</h2>
+                    <p class="text-tertiary/70 text-lg">경영정보학과는 정보통신기술과 경영 원리를 융합하여 실질적인 비즈니스 솔루션을 설계합니다.</p>
                 </div>
-
-                <!-- Center: Notice Box -->
-                <div class="portal-notice reveal-card">
-                    <div class="notice-header">
-                        <h3 class="notice-title">📢 학과 소식 (NOTICE)</h3>
-                        <a href="#" class="btn-more">더보기 +</a>
+                <div class="h-px bg-outline-variant/30 flex-grow mx-12 hidden lg:block"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Specialization Card 1 -->
+                <div class="bg-surface-container-lowest p-8 rounded-xl group hover:bg-surface-container-high transition-all duration-300 reveal-card">
+                    <div class="w-14 h-14 editorial-gradient rounded-xl flex items-center justify-center mb-8 text-white">
+                        <span class="material-symbols-outlined text-3xl">analytics</span>
                     </div>
-                    <ul class="notice-list">
-                        <li>
-                            <a href="#">
-                                <span class="notice-tag academic">학부</span>
-                                <span class="notice-subject">2026학년도 1학기 국가장학금 2차 신청 안내</span>
-                                <span class="notice-date">2026.03.16</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="notice-tag academic">학부</span>
-                                <span class="notice-subject">[특강] 생성형 AI 시대의 비즈니스 데이터 분석 실무</span>
-                                <span class="notice-date">2026.03.14</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="notice-tag event">행사</span>
-                                <span class="notice-subject">제 15회 경영정보인의 밤 학술제 참가자 모집</span>
-                                <span class="notice-date">2026.03.11</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="notice-tag job">취업</span>
-                                <span class="notice-subject">[인턴] 2026 현대자동차 IT 기획 하계 인턴 채용</span>
-                                <span class="notice-date">2026.03.09</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="notice-tag academic">학부</span>
-                                <span class="notice-subject">경영정보학과 학생회실 이용 수칙 안내</span>
-                                <span class="notice-date">2026.03.05</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <h3 class="font-headline font-bold text-xl text-tertiary mb-3">빅데이터 분석</h3>
+                    <p class="text-tertiary/60 leading-relaxed font-body text-sm">첨단 예측 모델링과 시각화를 사용하여 원천 데이터를 전략적 통찰력으로 전환합니다.</p>
                 </div>
-
-                <!-- Right: Quick Link Tiles -->
-                <div class="quick-link-tiles reveal-card">
-                    <a href="#" class="quick-tile">
-                        <div class="quick-icon">🏛️</div>
-                        <span class="quick-label">전자 게시판</span>
-                    </a>
-                    <a href="#" class="quick-tile">
-                        <div class="quick-icon">🎞️</div>
-                        <span class="quick-label">홍보 동영상</span>
-                    </a>
-                    <a href="#" class="quick-tile">
-                        <div class="quick-icon">📑</div>
-                        <span class="quick-label">학과 브로슈어</span>
-                    </a>
-                    <a href="#" class="quick-tile">
-                        <div class="quick-icon">❤️</div>
-                        <span class="quick-label">발전기금 기탁</span>
-                    </a>
-                    <a href="#" class="quick-tile">
-                        <div class="quick-icon">🗺️</div>
-                        <span class="quick-label">캠퍼스 맵</span>
-                    </a>
-                    <a href="#" class="quick-tile">
-                        <div class="quick-icon">💻</div>
-                        <span class="quick-label">전산 실습실</span>
-                    </a>
+                <!-- Specialization Card 2 -->
+                <div class="bg-surface-container-lowest p-8 rounded-xl group hover:bg-surface-container-high transition-all duration-300 reveal-card">
+                    <div class="w-14 h-14 editorial-gradient rounded-xl flex items-center justify-center mb-8 text-white">
+                        <span class="material-symbols-outlined text-3xl">security</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl text-tertiary mb-3">정보 보안</h3>
+                    <p class="text-tertiary/60 leading-relaxed font-body text-sm">강력한 사이버 보안 프레임워크와 리스크 관리를 통해 조직의 자산을 보호합니다.</p>
+                </div>
+                <!-- Specialization Card 3 -->
+                <div class="bg-surface-container-lowest p-8 rounded-xl group hover:bg-surface-container-high transition-all duration-300 reveal-card">
+                    <div class="w-14 h-14 editorial-gradient rounded-xl flex items-center justify-center mb-8 text-white">
+                        <span class="material-symbols-outlined text-3xl">cloud</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl text-tertiary mb-3">클라우드 시스템</h3>
+                    <p class="text-tertiary/60 leading-relaxed font-body text-sm">현대적인 클라우드 컴퓨팅 패러다임을 이용해 확장 가능한 엔터프라이즈 아키텍처를 설계합니다.</p>
+                </div>
+                <!-- Specialization Card 4 -->
+                <div class="bg-surface-container-lowest p-8 rounded-xl group hover:bg-surface-container-high transition-all duration-300 reveal-card">
+                    <div class="w-14 h-14 editorial-gradient rounded-xl flex items-center justify-center mb-8 text-white">
+                        <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl text-tertiary mb-3">디지털 전략</h3>
+                    <p class="text-tertiary/60 leading-relaxed font-body text-sm">기술 중심 사회에서 비즈니스 모델을 재정의하는 디지털 혁신 과제를 주도합니다.</p>
                 </div>
             </div>
-        </section>
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">문의하기</h2>
-                    <p class="section-description">학과 및 입시에 대해 궁금한 점이 있으시면 언제든지 문의해 주세요.</p>
+        </div>
+    </section>
+
+    <!-- Latest Updates (Bento Grid) -->
+    <section id="news" class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center gap-4 mb-16">
+                <div class="w-12 h-1.5 bg-secondary rounded-full"></div>
+                <h2 class="font-headline font-extrabold text-4xl tracking-tight text-tertiary">학과 최신 소식</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-8">
+                <!-- Featured Large Card -->
+                <div class="col-span-12 lg:col-span-7 relative h-[600px] rounded-2xl overflow-hidden group reveal-card">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/dept_intro.png" alt="MIS Workshop"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-12 text-white">
+                        <span class="font-label text-xs uppercase tracking-[0.2em] mb-4 block">주요 공지사항</span>
+                        <h3 class="font-headline font-bold text-4xl mb-6 leading-tight">경영정보학과, AI 개발을 위한 50억원 규모 연구비 수주</h3>
+                        <a href="#" class="flex items-center gap-2 font-label font-bold uppercase tracking-wider text-sm hover:gap-4 transition-all">
+                            전체 기사 읽기 <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-info-cards">
-                        <div class="info-card">
-                            <div class="info-icon">📍</div>
-                            <div class="info-text">
-                                <h4>위치</h4>
-                                <p>충북대학교 경영대학 (N13동) 4층 학과사무실</p>
+                <!-- Secondary Updates Column -->
+                <div class="col-span-12 lg:col-span-5 flex flex-col gap-8">
+                    <div class="bg-surface-container-low p-8 rounded-2xl flex-1 flex flex-col justify-between reveal-card">
+                        <div>
+                            <span class="text-secondary font-label text-xs font-bold uppercase tracking-widest block mb-4">행사안내 • 3월 20일</span>
+                            <h4 class="font-headline font-bold text-2xl text-tertiary mb-4">Cybersecurity Symposium 2026: 학계와 산업의 만남</h4>
+                            <p class="text-tertiary/70 line-clamp-2">실리콘밸리의 전문가들과 함께하는 집중 워크숍 및 네트워킹 행사에 초대합니다.</p>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-outline-variant/30">
+                            <a class="text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform" href="#">참가 신청하기 <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                        </div>
+                    </div>
+                    <div class="bg-tertiary p-8 rounded-2xl flex-1 text-white relative overflow-hidden reveal-card">
+                        <div class="relative z-10">
+                            <span class="text-on-tertiary-container font-label text-xs font-bold uppercase tracking-widest block mb-4">교수 소식 (Faculty Highlight)</span>
+                            <h4 class="font-headline font-bold text-2xl mb-4">김철수 교수, '올해의 교육자상' 수상</h4>
+                            <p class="text-white/70 line-clamp-2">분산 데이터베이스 관리 분야의 획기적인 연구와 학생 멘토링 공로를 인정받았습니다.</p>
+                        </div>
+                        <span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl text-white/5 rotate-12">trophy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Info -->
+                <div class="lg:w-1/3">
+                    <h2 class="font-headline font-extrabold text-5xl text-primary mb-8 tracking-tighter">문의하기</h2>
+                    <p class="text-tertiary/70 text-lg mb-12">학과 및 입시에 대해 궁금한 점이 있으시면 언제든지 문의해 주세요.</p>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-tertiary">위치</h4>
+                                <p class="text-tertiary/60">충북대학교 경영대학 (N13동) 4층 학과사무실</p>
                             </div>
                         </div>
-                        <div class="info-card">
-                            <div class="info-icon">📞</div>
-                            <div class="info-text">
-                                <h4>대표 전화</h4>
-                                <p>043-261-2114</p>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-tertiary">대표 전화</h4>
+                                <p class="text-tertiary/60">043-261-2114</p>
                             </div>
                         </div>
-                        <div class="info-card">
-                            <div class="info-icon">📧</div>
-                            <div class="info-text">
-                                <h4>이메일</h4>
-                                <p>mis@cbnu.ac.kr</p>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-tertiary">이메일</h4>
+                                <p class="text-tertiary/60">mis@cbnu.ac.kr</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <form id="contact-form" class="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="user-name">이름 <span class="required">*</span></label>
-                            <input type="text" id="user-name" name="name" placeholder="이름을 입력하세요" required>
-                            <span class="error-msg" id="name-error">이름을 입력해 주세요.</span>
+                </div>
+                <!-- Form -->
+                <div class="lg:w-2/3">
+                    <form id="contact-form" class="bg-white p-10 rounded-3xl shadow-xl space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="user-name" class="block font-label text-sm font-bold uppercase text-tertiary/70">이름 <span class="text-red-500">*</span></label>
+                                <input type="text" id="user-name" class="w-full p-4 bg-surface-container-low rounded-xl border-none focus:ring-2 focus:ring-[#5d0025] outline-none transition-all" placeholder="이름을 입력하세요" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="user-email" class="block font-label text-sm font-bold uppercase text-tertiary/70">이메일 <span class="text-red-500">*</span></label>
+                                <input type="email" id="user-email" class="w-full p-4 bg-surface-container-low rounded-xl border-none focus:ring-2 focus:ring-[#5d0025] outline-none transition-all" placeholder="example@cbnu.ac.kr" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="user-email">이메일 <span class="required">*</span></label>
-                            <input type="email" id="user-email" name="email" placeholder="example@cbnu.ac.kr" required>
-                            <span class="error-msg" id="email-error">유효한 이메일 주소를 입력해 주세요.</span>
+                        <div class="space-y-2">
+                            <label for="user-subject" class="block font-label text-sm font-bold uppercase text-tertiary/70">상세 문의</label>
+                            <input type="text" id="user-subject" class="w-full p-4 bg-surface-container-low rounded-xl border-none focus:ring-2 focus:ring-[#5d0025] outline-none transition-all" placeholder="문의 제목을 입력하세요">
                         </div>
-                        <div class="form-group">
-                            <label for="user-subject">문의 제목</label>
-                            <input type="text" id="user-subject" name="subject" placeholder="문의 제목을 입력하세요">
+                        <div class="space-y-2">
+                            <label for="user-message" class="block font-label text-sm font-bold uppercase text-tertiary/70">문의 내용 <span class="text-red-500">*</span></label>
+                            <textarea id="user-message" rows="5" class="w-full p-4 bg-surface-container-low rounded-xl border-none focus:ring-2 focus:ring-[#5d0025] outline-none transition-all" placeholder="궁금하신 내용을 상세히 적어주세요" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="user-message">문의 내용 <span class="required">*</span></label>
-                            <textarea id="user-message" name="message" rows="5" placeholder="궁금하신 내용을 상세히 적어주세요" required></textarea>
-                            <span class="error-msg" id="message-error">문의 내용을 입력해 주세요.</span>
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="privacy-policy" class="w-5 h-5 text-[#5d0025] border-gray-300 rounded focus:ring-[#5d0025]" required>
+                            <label for="privacy-policy" class="text-sm text-tertiary/70 font-body">개인정보 수집 및 이용에 동의합니다.</label>
                         </div>
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-container">
-                                <input type="checkbox" id="privacy-policy" required>
-                                <span class="checkmark"></span>
-                                <span class="checkbox-text">개인정보 수집 및 이용에 동의합니다.</span>
-                            </label>
-                            <span class="error-msg" id="privacy-error">개인정보 수집 동의가 필요합니다.</span>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit-btn">문의 보내기</button>
+                        <button type="submit" class="w-full editorial-gradient text-white py-4 rounded-full font-label font-bold uppercase tracking-widest shadow-xl hover:shadow-[#5d0025]/30 transition-all">
+                            문의 보내기
+                        </button>
                     </form>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="site-footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <div class="footer-logo">
-                    <img src="https://via.placeholder.com/40x40/FFFFFF/4A148C?text=CBNU" alt="충북대학교 마크(흑백)" class="logo-mark">
-                    <span>충북대학교 경영정보학과</span>
+    <!-- Footer -->
+    <footer class="bg-[#1c2d3e] w-full pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+            <div class="col-span-1 md:col-span-1">
+                <span class="text-xl font-bold text-white mb-4 block font-headline">충북대학교 경영정보학과</span>
+                <p class="text-gray-400 font-body text-sm leading-relaxed mb-6">데이터와 기술로 새로운 경영의 패러다임을 제시하며, 4차 산업혁명을 주도할 창의적인 인재를 양성합니다.</p>
+                <div class="flex gap-4">
+                     <a href="#" class="text-gray-400 hover:text-white transition-colors"><span class="material-symbols-outlined">language</span></a>
+                     <a href="#" class="text-gray-400 hover:text-white transition-colors"><span class="material-symbols-outlined">hub</span></a>
+                     <a href="#" class="text-gray-400 hover:text-white transition-colors"><span class="material-symbols-outlined">alternate_email</span></a>
                 </div>
-                <address class="footer-address">
-                    <p>충청북도 청주시 서원구 충대로 1 (개신동) 충북대학교 경영대학 (N13) 경영정보학과</p>
-                    <p>Tel: 043-261-2114 | Email: mis@cbnu.ac.kr</p>
-                </address>
-                <p class="copyright">&copy; 2026 Chungbuk National University Dept. of Management Information Systems. All rights reserved.</p>
             </div>
-            
-            <div class="footer-links">
-                <h4>빠른 링크</h4>
-                <ul>
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">이메일무단수집거부</a></li>
-                    <li><a href="#">캠퍼스맵</a></li>
-                    <li><a href="#">충북대학교 포털</a></li>
+            <div class="col-span-1">
+                <h5 class="text-white font-semibold mb-6 uppercase tracking-widest text-xs font-label">Academics</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-[#b70054] transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-300" href="#">학과소개</a></li>
+                    <li><a class="text-gray-400 hover:text-[#b70054] transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-300" href="#">교육과정</a></li>
+                    <li><a class="text-gray-400 hover:text-[#b70054] transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-300" href="#">장학제도</a></li>
                 </ul>
             </div>
-            
-            <div class="footer-social">
-                <h4>소셜 네트워크</h4>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/32x32/333333/FFFFFF?text=F" alt="페이스북">
-                    </a>
-                    <a href="#" aria-label="Instagram" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/32x32/333333/FFFFFF?text=I" alt="인스타그램">
-                    </a>
-                    <a href="#" aria-label="YouTube" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/32x32/333333/FFFFFF?text=Y" alt="유튜브">
-                    </a>
-                </div>
+            <div class="col-span-1">
+                <h5 class="text-white font-semibold mb-6 uppercase tracking-widest text-xs font-label">Resources</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-[#b70054] transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-300" href="#">취업정보</a></li>
+                    <li><a class="text-gray-400 hover:text-[#b70054] transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-300" href="#">공지사항</a></li>
+                    <li><a class="text-gray-400 hover:text-[#b70054] transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-300" href="#">갤러리</a></li>
+                </ul>
+            </div>
+            <div class="col-span-1">
+                <h5 class="text-white font-semibold mb-6 uppercase tracking-widest text-xs font-label">Admin</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-[#b70054] transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-300" href="#">개인정보처리방침</a></li>
+                    <li><a class="text-gray-400 hover:text-[#b70054] transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-300" href="#">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 pt-16 mt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-xs font-body">© 2026 Management Information Systems Department. All rights reserved.</p>
+            <div class="flex gap-8">
+                <span class="text-gray-500 text-xs uppercase tracking-widest">Designed via Stitch</span>
             </div>
         </div>
     </footer>
+</main>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
